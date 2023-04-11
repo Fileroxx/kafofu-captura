@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  background: url('../img/fundo.png');
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+
+}
+
+main .luciano-ramos {
+  text-align: left;
+  padding-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.processo {
+  color: #fff;
+}
+
+.luciano {
+  color: #fda10d;
+  font-size: 2.5rem;
+}
+
+main .texto {
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+
+main .formulario {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main .formulario input {
+  background-color: #fafafa;
+  padding: .8rem;
+  width: 100%;
+  outline: none;
+  margin-bottom: .5rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+main .formulario button {
+  background: #fda10d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  padding: .8rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+ 
+  main {
+    background-size: cover;
+  }
+
+  main .criatividade img {
+    margin-top: -10%;
+  }
+
+  main .luciano-ramos {
+    width: 100%;
+  }
+
+  main .processo {
+    font-size: 1.5rem;
+  }
+
+  main .luciano {
+    font-size: 2.3rem;
+  }
+
+  main .texto {
+    width: 100%;
+  }
+
+  main .formulario {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+}
+
+
+#aprender {
+  background: url('../img/bgAprender.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0rem;
+  color: #fff;
+}
+
+
+#aprender .aprender {
+  padding-top: 3rem !important;
+}
+
+#aprender .dia {
+  padding-top: 2rem;
+}
+
+#aprender .dia h3{
+  color: #edfd0d;
+}
+
+#aprender .dia p {
+  width: 70%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#aprender .atencao {
+  padding-top: 1rem;
+}
+
+#aprender .atencao h5 {
+  color: #fda10d;
+}
+
+#aprender .atencao p {
+  width: 80%;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 991px) {
+  #aprender .dia p {
+    width: 100%;
+  }
+
+  #aprender .atencao p {
+    width: 100%;
+  }
+}
+
+#desperte {
+  background: url('../img/fundo3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+#desperte .titulo {
+  padding-right: 5rem;
+  padding-top: 5rem;
+}
+
+#desperte div p {
+  font-weight: 400;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  padding-right: 2rem;
+}
+
+#desperte div span {
+  color: #edfd0d;
+}
+
+#desperte .imagem img {
+  width: 70%;
+}
+
+@media screen and (max-width: 991px) {
+  #desperte .imagem img {
+    width: 100%;
+  }
+
+  #desperte .titulo {
+    padding: 0;
+    
+  }
+
+  #desperte .titulo img {
+    width: 100%;
+  }
+
+
+
+}
+
+#desenvolve {
+  background: url('../img/fundo4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#desenvolve .imagem img {
+  width: 80%;
+}
+
+#desenvolve div {
+  color: #fff;
+}
+
+#desenvolve div p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#desenvolve .botao {
+  padding-top: 1rem;
+}
+
+#desenvolve .botao button {
+  background: #fda10d;
+  color: #fff;
+  border: 0;
+  padding: .8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#desenvolve span {
+  color: #edfd0d;
+}
+
+@media screen and (max-width: 991px) {
+  #desenvolve {
+    padding-top: 1rem;
+  }
+
+  #desenvolve .botao button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+}
+
+
+
+
+#mentores {
+  background: url('../img/fundo5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+}
+
+#mentores .titulo {
+  text-align: center;
+}
+
+#mentores .texto {
+  width: 80%;
+  padding-top: 2rem;
+}
+
+#mentores .texto p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#mentores .botao {
+  padding-top: 1rem;
+}
+
+#mentores .botao button {
+  background: #fda10d;
+  color: #fff;
+  border: 0;
+  padding: .8rem;
+  font-weight: 600;
+  width: 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#mentores .titulo img {
+  width: 70%;
+}
+
+#mentores .imagem img {
+  width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  #mentores .titulo img {
+    width: 100%;
+  }
+
+  #mentores .botao button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #mentores .imagem {
+    text-align: center;
+  }
+
+  #mentores .texto {
+    width: 100%;
+  }
+
+  #mentores .imagem img {
+    width: 80%;
+  }
+
+}
