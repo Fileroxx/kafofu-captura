@@ -43,12 +43,12 @@
 
 
               <div class="formulario">
-                <form id="formulario">
+                <form id="formulario" onsubmit="enviarDados(event)">
                   <input required type="email" id="email" class="email" placeholder="Seu melhor e-mail">
                   <br>
                   <input required type="tel" id="tel" class="tel" placeholder="(00) 0 0000-0000">
                   <br>
-                  <button type="submit">QUERO ME INSCREVER AGORA <i class="fa-solid fa-arrow-right"></i></button>
+                  <button id="enviar" type="submit">QUERO ME INSCREVER AGORA <i class="fa-solid fa-arrow-right"></i></button>
               </form>
               </div>
 
@@ -250,29 +250,44 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
 
 <script>
-  const form = document.getElementById('formulario');
-const webhookUrl = 'https://functions-api.clint.digital/endpoints/integration/webhook/deal/da853427-5ab9-42ea-94eb-0eb1e9fd8573';
-
-form.addEventListener('submit', (event) => {
+function enviarDados(event) {
   event.preventDefault();
-  const formData = new FormData(event.target);
-  const url = event.target.action;
+
+  const email = document.getElementById('email').value;
+  const telefone = document.getElementById('tel').value;
+
+  const data = {
+    email,
+    telefone
+  };
   
-  fetch(url, {
+  console.log(data)
+
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
+
+  fetch('https://functions-api.clint.digital/endpoints/integration/webhook/deal/da853427-5ab9-42ea-94eb-0eb1e9fd8573', {
     method: 'POST',
-    body: formData
-  })
-  .then(() => {
-    window.location.href = 'obrigado.html';
-    fetch(webhookUrl, {
-      method: 'POST',
-      body: JSON.stringify({data: formData})
+    headers: headers,
+    body: JSON.stringify({
+      email: email,
+      telefone: telefone
     })
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
   })
-  .catch(error => console.error(error));
-});
+  .then(response => {
+    // Verifica se a resposta foi bem-sucedida
+    if (response.ok) {
+      alert('Dados enviados com sucesso!');
+    } else {
+      alert('Erro ao enviar dados!');
+    }
+  })
+  .catch(error => {
+    alert('Erro ao enviar dados!');
+    console.log(error)
+  });
+}
+
 
 </script>
 
