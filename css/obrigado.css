@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../img/fundo.png');
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#obrigado {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#obrigado .imagem {
+  text-align: center;
+}
+
+#obrigado .imagem img {
+  width: 15%;
+}
+
+#obrigado .texto {
+  text-align: center;
+  color: #fff;
+  padding-top: 2rem;
+}
+
+#obrigado .texto h1 {
+  font-weight: 500;
+}
+
+#obrigado .texto h3 {
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  color: #fda10d;
+  font-weight: 600;
+}
+
+#obrigado .botao {
+  padding-top: 2rem;
+}
+
+#obrigado .botao button {
+  background: #01b021;
+  width: 30%;
+  color: #fff;
+  padding: .8rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#obrigado i {
+  padding-left: 2rem;
+}
