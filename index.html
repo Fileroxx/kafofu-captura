@@ -43,7 +43,7 @@
 
 
               <div class="formulario">
-                <form id="formulario" action="https://functions-api.clint.digital/endpoints/integration/webhook/deal/da853427-5ab9-42ea-94eb-0eb1e9fd8573">
+                <form id="formulario">
                   <input required type="email" id="email" class="email" placeholder="Seu melhor e-mail">
                   <br>
                   <input required type="tel" id="tel" class="tel" placeholder="(00) 0 0000-0000">
@@ -250,21 +250,30 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
 
 <script>
-  const form = document.querySelector('#formulario');
+  const form = document.getElementById('formulario');
+const webhookUrl = 'https://functions-api.clint.digital/endpoints/integration/webhook/deal/da853427-5ab9-42ea-94eb-0eb1e9fd8573';
 
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const url = event.target.action;
+  
+  fetch(url, {
+    method: 'POST',
+    body: formData
+  })
+  .then(() => {
+    window.location.href = 'obrigado.html';
+    fetch(webhookUrl, {
+      method: 'POST',
+      body: JSON.stringify({data: formData})
+    })
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
+  })
+  .catch(error => console.error(error));
+});
 
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData
-    });
-
-    if (response.ok) {
-      window.location.href = 'obrigado.html';
-    }
-  });
 </script>
 
 
