@@ -254,11 +254,11 @@ function enviarDados(event) {
   event.preventDefault();
 
   const email = document.getElementById('email').value;
-  const telefone = document.getElementById('tel').value;
+  const tel = document.getElementById('tel').value;
 
   const data = {
     email,
-    telefone
+    tel
   };
   
   console.log(data)
@@ -266,20 +266,23 @@ function enviarDados(event) {
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
-  fetch('https://functions-api.clint.digital/endpoints/integration/webhook/deal/da853427-5ab9-42ea-94eb-0eb1e9fd8573', {
+  fetch(
+    'https://functions-api.clint.digital/endpoints/integration/webhook/deal/be44e172-8b59-45b9-baec-a08af17a3c90', 
+    {
     method: 'POST',
     headers: headers,
-    body: JSON.stringify({
-      email: email,
-      telefone: telefone
-    })
+    body: JSON.stringify(data)
   })
   .then(response => {
     // Verifica se a resposta foi bem-sucedida
     if (response.ok) {
       alert('Dados enviados com sucesso!');
+      window.location.href = 'obrigado.html'
+    
+      
     } else {
       alert('Erro ao enviar dados!');
+      console.log(error)
     }
   })
   .catch(error => {
